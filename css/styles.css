@@ -44,7 +44,7 @@ textarea {
 
 /* Helper Classes */
 .container {
-    width: 90%;
+    width: 288px;
     margin: 0 auto;
     padding: 0;
 }
@@ -964,10 +964,9 @@ textarea {
 /* ========================= */
 /* Tablet: 768px — 1157px    */
 /* ========================= */
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
+@media only screen and (min-width: 768px) {
     .container {
-        width: 90%;
-        padding: 0;
+        width: 736px;
     }
 
     /* Header / Nav */
@@ -983,7 +982,6 @@ textarea {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        /* align-items: center; */
     }
 
     .contacts-link {
@@ -1008,22 +1006,10 @@ textarea {
         pointer-events: none;
     }
 
-    /* Hero */
-    .order {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpg);
-    }
-
-    .order-title {
-        font-size: 56px;
-        line-height: 1.07;
-    }
-
     /* Features */
     .features-list {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
         gap: 24px;
         justify-content: center;
     }
@@ -1034,47 +1020,27 @@ textarea {
         margin-bottom: 72px;
     }
 
-    .features-item-icon-box {
-        display: none;
-    }
-
     .features-item-title {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 111%;
-        letter-spacing: 0.02em;
         text-align: left;
     }
 
-    .features-item-description {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: 0.02em;
-    }
 
     /* Team */
     .team-list {
-        width: 100%;
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
         gap: 64px 24px;
         justify-content: center;
     }
 
     .team-member {
-        margin-right: 0px;
         margin-bottom: 0;
     }
 
     /* Portfolio */
     .portfolio-list {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
         gap: 72px 24px;
         justify-content: center;
     }
@@ -1090,27 +1056,13 @@ textarea {
     }
 
     .footer-wrapper {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 0;
         padding-left: 108px;
     }
 
     .footer-main-info {
-        margin-bottom: 72px;
         margin-right: 24px;
-    }
-
-    .description-footer {
-        text-align: left;
-    }
-
-    .footer-contacts {
-        display: block;
-        margin-bottom: 72px;
-        margin-right: 0;
-        text-align: left;
     }
 
     .footer-form {
@@ -1118,7 +1070,7 @@ textarea {
     }
 
     .footer-form-wrapper {
-        display: block;
+        align-items: normal;
     }
 
     .footer-form-label {
@@ -1127,19 +1079,11 @@ textarea {
 
     .footer-form-input {
         width: 264px;
-        box-sizing: border-box;
-    }
-
-    .footer-form-submit {
-        width: 165px;
     }
 
     .contacts-popup-content {
         max-width: 54%;
         height: 60%;
-        min-height: 584px;
-        padding: 24px;
-        padding-top: 72px;
     }
 }
 
@@ -1149,8 +1093,6 @@ textarea {
 @media only screen and (min-width: 1158px) {
     .container {
         width: 1158px;
-        margin: 0 auto;
-        padding: 0 15px;
     }
 
 
@@ -1168,38 +1110,17 @@ textarea {
         display: block;
     }
 
-    .mobile-menu-burger-btn {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    .mobile-menu {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-
     /* Hero */
     .order {
         max-width: 1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1x2.jpg);
     }
 
-    .order-title {
-        font-size: 56px;
-        line-height: 1.07;
-    }
-
-
     /* Features Section */
-    .features {
-        background-color: #ffffff;
-    }
 
     .features-list {
-        display: flex;
-        flex-direction: row;
         width: 1128px;
+        flex-wrap: nowrap;
         margin: 0 auto;
         padding: 0;
     }
@@ -1207,6 +1128,7 @@ textarea {
     .features-item {
         flex-basis: calc((100% - 3 * 24px) / 4);
         margin-right: 24px;
+        margin-bottom: 0;
     }
 
     .features-item:last-child {
@@ -1217,7 +1139,6 @@ textarea {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: calc((100% - 3 * 24) / 4);
         height: 112px;
         border: 1px solid #8E8F99;
         border-radius: 4px;
@@ -1234,38 +1155,16 @@ textarea {
         color: #2e2f42;
     }
 
-    .features-item-description {
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-    }
-
 
     /* Team */
     .team-list {
-        display: flex;
-        flex-direction: row;
-        width: 1128px;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .team-member {
-        width: 264px;
-        margin-right: 24px;
-        margin-bottom: 0;
-    }
-
-    .team-member:last-child {
-        margin-right: 0;
+        flex-wrap: nowrap;
+        gap: 24px;
     }
 
 
     /* Portfolio */
     .portfolio-list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         column-gap: 24px;
         row-gap: 48px;
         padding: 0;
@@ -1277,13 +1176,10 @@ textarea {
 
 
     /* Footer */
-    .footer {
-        text-align: left;
-    }
-
     .footer-wrapper {
-        display: flex;
-        flex-direction: row;
+        margin: 0 auto;
+        padding: 0;
+        flex-wrap: nowrap;
         align-items: flex-start;
     }
 
@@ -1308,19 +1204,10 @@ textarea {
         gap: 24px;
     }
 
-    .footer-form-label {
-        width: 264px;
-    }
-
-    .footer-form-input {
-        width: 264px;
-    }
-
     .contacts-popup-content {
         width: 408px;
         min-height: 584px;
         max-height: 90%;
         padding: 24px;
-        padding-top: 72px;
     }
 }
