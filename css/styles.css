@@ -46,7 +46,7 @@ textarea {
 .container {
     width: 320px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 16px;
 }
 
 .section {
@@ -91,6 +91,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 15px;
 }
 
 .navbar {
@@ -204,13 +205,31 @@ textarea {
     text-align: center;
     background-color: #2e2f42;
     color: #ffffff;
-    padding: 188px 0;
+    padding: 72px 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     max-width: 100%;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile.jpg);
     margin: 0 auto;
+}
+
+@media (min-resolution: 192dpi) {
+    .order {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile@2x.jpg);
+    }
+}
+
+@media (min-resolution: 288dpi) {
+    .order {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile@3x.jpg);
+    }
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .order-title {
@@ -218,9 +237,8 @@ textarea {
     font-size: 36px;
     line-height: 111%;
     letter-spacing: 0.02em;
-    text-align: center;
-    max-width: 496px;
-    margin: 0 auto 48px;
+    margin-bottom: 72px;
+    max-width: 216px;
 }
 
 .order-button {
@@ -875,11 +893,14 @@ textarea {
 
 .mobile-menu-burger-btn {
     display: block;
-    top: 16px;
-    right: 16px;
+    /* top: 16px;
+    right: 16px; */
     background-color: #FFFFFF;
     outline: none;
     border: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
 }
 
 .mobile-menu-close {
@@ -982,7 +1003,6 @@ textarea {
 @media only screen and (min-width: 768px) {
     .container {
         width: 768px;
-        padding: 0 16px;
     }
 
     /* Header / Nav */
@@ -1025,10 +1045,34 @@ textarea {
         display: none;
     }
 
+    .order {
+        padding: 112px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet.jpg);
+    }
+
+    @media (min-resolution: 192dpi) {
+        .order {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet@2x.jpg);
+        }
+    }
+
+    @media (min-resolution: 288dpi) {
+        .order {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet@3x.jpg);
+        }
+    }
+
     .order-title {
         font-size: 56px;
         line-height: 107%;
         margin-bottom: 36px;
+        max-width: 496px;
+    }
+
+    .order-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     /* Features */
@@ -1133,7 +1177,6 @@ textarea {
 @media only screen and (min-width: 1158px) {
     .container {
         width: 1158px;
-        padding: 0 15px;
     }
 
 
@@ -1167,9 +1210,22 @@ textarea {
     }
 
     /* Hero */
-    /* .order {
-        max-width: 100%;
-    } */
+    .order {
+        padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desktop.jpg);
+    }
+
+    @media (min-resolution: 192dpi) {
+        .order {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desktop@2x.jpg);
+        }
+    }
+
+    @media (min-resolution: 288dpi) {
+        .order {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desktop@3x.jpg);
+        }
+    }
 
     .order-title {
         margin-bottom: 48px;
@@ -1267,17 +1323,5 @@ textarea {
         width: 408px;
         min-height: 584px;
         max-height: 90%;
-    }
-}
-
-@media (min-resolution: 192dpi) {
-    .order {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1@2x.jpg);
-    }
-}
-
-@media (min-resolution: 288dpi) {
-    .order {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1@3x.jpg);
     }
 }
